@@ -250,7 +250,7 @@ $start_time = MICROTIME(TRUE);
 				echo "$Vdata \n\033[1;1;33m";
 $start_time = MICROTIME(TRUE);				
 				$sql = "Select `ID` from `releases` where `categoryID` = 7020 and `searchname` REGEXP '{$Vdata}'";
-echo "\033[1;0;36m  $sql\n\n";				
+				
 				$rel = $db->query($sql);
 				$stop_time = MICROTIME(TRUE);	
 				$time = round($stop_time - $start_time);
@@ -300,7 +300,7 @@ echo "\033[1;0;36m  $sql\n\n";
 				echo "$Vdata \n\033[1;1;33m";
 $start_time = MICROTIME(TRUE);				
 				$sql = "Select `ID` from `releases` where `searchname` REGEXP '{$Vdata}' and `categoryID` = 7020";
-echo "\033[1;0;36m  $sql\n\n";
+
 				$rel = $db->query($sql);
 				$stop_time = MICROTIME(TRUE);	
 				$time = round($stop_time - $start_time);
@@ -348,7 +348,7 @@ echo "\033[1;0;36m  $sql\n\n";
 				echo "$Vdata \n\033[1;1;33m";
 $start_time = MICROTIME(TRUE);				
 				$sql = "Select `ID` from `releases` where `searchname` REGEXP '{$Vdata}' and `categoryID` = 7020";
-echo "\033[1;0;36m  $sql\n\n";
+
 				$rel = $db->query($sql);
 				$stop_time = MICROTIME(TRUE);	
 				$time = round($stop_time - $start_time);
