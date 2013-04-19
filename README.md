@@ -15,11 +15,13 @@ I have broken the script into the various categories above, and created text fil
 
 The real strengnth of this script and its lists is that is is constantly evolving/expanding. New authors, publishers, keywords, etc. are added daily to the lists to capture books as they are released. Since the lists are read from  publicly shared files, there is no effeort required on the user's part. <b>I am doing all the work for you!</b> 
 
-The script also pulls one cool trick. It searches the ebook tables for books that <b>have</b> covers, but do <b>not have</b> a publisher listed. These are one sign of self-published books. Unfortunately, about 40% of self-published books get by. In order to catch those, I need some coding help. I outline the issue [here](http://www.newznabforums.com/index.php?topic=1085.msg9479#msg9479). Please read the whole post and if you can, please post me a message of the forum.
+The script also pulls one cool trick. It searches the ebook tables for books that <b>have</b> covers, but do <b>not have</b> a publisher listed. These are one sign of self-published books. Unfortunately, about 40% of self-published books get by. In order to catch those, I need some coding help. I outline the issue [here](http://www.newznabforums.com/index.php?topic=1085.msg9479#msg9479). Please read the whole post and if you can help, please post me a message of the forum.
 
 <img src="http://s11.postimg.org/3ubqn95sz/deleteromance.jpg">
 
 <b>Instructions:</b>
+
+<b>BACKUP YOUR DATABASE!!!! </b>You have been warned.
 
 Copy deleteromance.php to your /misc/testing folder and execute.
 
