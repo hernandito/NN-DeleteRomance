@@ -1,7 +1,7 @@
 <?php
 
 //This script allows you to delete properly all releases which match some criteria
-//The nzb, covers and all linked records will be deleted properly.
+//NOT YET - The nzb, covers and all linked records will be deleted properly.
 
 //##############################################################################
 //  If you want to run and maintain your own lists, you need to 
