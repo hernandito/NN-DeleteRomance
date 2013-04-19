@@ -17,7 +17,7 @@ The real strengnth of this script and its lists is that is is constantly evolvin
 
 The script also pulls one cool trick. It searches the ebook tables for books that have covers, but do not have a publisher listed. These are one sign of self-published books. Unfortunately, about 40% of self-published books get by. In order to catch those, I need some coding help. I outline the issue <a >here
 
-<img src="http://postimg.org/image/pgqr4a4db/">
+<img src="http://s11.postimg.org/3ubqn95sz/deleteromance.jpg">
 
 Instructions:
 
