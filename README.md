@@ -29,7 +29,7 @@ If you want to run and maintain your own lists, copy all the .txt files to a fol
 
 <b>Next Steps:</b>
 
-This script is not remotely done... I need 2 crucial compunents to make it 98% reliable... As I explained earlier, because of my lack of codings skills, I need help coding some additional parts. I will create a post on the nn-forum dedicated to this script. I will ask for specific help there.
+This script is not remotely done... I need 2 crucial components to make it 98% reliable... As I explained earlier, because of my lack of codings skills, I need help coding some additional parts. I will create a post on the nn-forum dedicated to this script. I will ask for specific help there.
 
 Last note: I am CLUELESS how to operate Github. I copied and pasted the test into the github site. So please do not ask me to branch, clone, stage, commit, pull, ejaculate or expectorate. I have a vague notion about how it works, but I don't have the patience to learn it. I did learn the ejaculate part though....
 
