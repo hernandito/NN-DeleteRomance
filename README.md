@@ -27,9 +27,8 @@ The script also pulls one cool trick. It searches the ebook tables for books tha
 
 <b>BACKUP YOUR DATABASE!!!! </b>You have been warned.
 
-If you want to actually delete the releases, change  <b>$enabledelete = "true" </b>
-
-Copy deleteromance.php to your /misc/testing folder and execute.
+    Copy deleteromance.php to your /misc/testing folder and execute.
+    If you want to actually delete the releases, change  <b>$enabledelete = "true" </b>
 
 If you want to run and maintain your own lists, copy all the .txt files to a folder accessible to your web site. Edit the path at the top of the php to point to the folder where these files are stored. Edit the .txt files to yor hearts content... but please note that it took me 2 months of adding words to these lists on a daily basis.
 
