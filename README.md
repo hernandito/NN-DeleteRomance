@@ -9,6 +9,8 @@ I was sick and tired of looking at all the ebook releases and seeing a great dea
 
 <img src="http://s12.postimg.org/kllxxur3h/crapbooks.png">
 
+<img src="http://s8.postimg.org/fnw79bckl/goodbooks.png">
+
 <b>How the Script Works:</b>
 
 It is pretty straight forward. I have for close to 2 months been building lists of keywords that I find are common to these books. These lists are either know publishers of the objectionable content, known authors, keywords, and abbreviations that are telltale signs of a book to be deleted.
