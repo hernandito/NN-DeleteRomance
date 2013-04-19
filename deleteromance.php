@@ -30,7 +30,7 @@ require_once(FS_ROOT."/../../www/lib/releases.php");
 
 $releases = new Releases();
 $db = new Db;
-//$deletefilepath = "https://dl.dropboxusercontent.com/u/11520551";
+
 
 
 $countme = 0;
