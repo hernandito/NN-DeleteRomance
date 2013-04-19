@@ -7,7 +7,7 @@ NN-DeleteRomance
 
 I was sick and tired of looking at all the ebook releases and seeing a great deal of books delaing with Romance, Erotica, and Fetish style subjects. In addition, with the ease and proliferation of self-publishing authors, I found also a great deal of these books that lack "quality" as they have not been vetted by major publishing houses. This is not to detract from the merit of self-published authors. But since life is short, and there is a great abundance of quality books, I decided to weed these out as well.
 
-<img src="http://s24.postimg.org/newbv2l2t/crapbooks.png">
+<img src="http://s12.postimg.org/kllxxur3h/crapbooks.png">
 
 <b>How the Script Works:</b>
 
