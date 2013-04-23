@@ -82,12 +82,12 @@ $countself2 = 0;
 									$name = $r['NAME'];
 									$releases->delete($r['ID']);
 									echo "\033[1;0;32m    Deleted: \033[1;0;37m$name\n";
-									echo "\033[1;1;33mDeleted $countself2 release(s)\n";
+									
 								}
 								$stop_time = MICROTIME(TRUE);
 								$time = round($stop_time - $start_time);
 								echo "\033[1;0;36mDelete Time: $time seconds\n";
-
+								echo "\033[1;1;33mDeleted $countself2 release(s)\n";
 								echo "\033[1;1;30mCleaning entries from bookinfo table....";
 								$db->query(sprintf("DELETE FROM `bookinfo` WHERE `publisher` = '' and cover=1"));
 								echo "\033[1;1;33m Done! \n\n\n\n\n\n\033[1;1;33m";
