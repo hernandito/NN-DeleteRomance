@@ -867,6 +867,7 @@ if($enabledelete == "true")
 	}
 
 echo "\033[0;1;35mFinished!\033[1;1;36m\n";
+$countme = $countme + $countself ;	
 echo "Deleted a total of \033[0;1;33m$countme \033[1;1;36mrelease(s) \n\n\n\033[1;0;36m";
 
 ?>
