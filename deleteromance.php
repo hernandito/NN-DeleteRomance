@@ -11,6 +11,13 @@
 
 $deletefilepath = "https://raw.github.com/hernandito/NN-DeleteRomance/master";
 
+//  Add an additional path to lists you maintain. This way you are able to run 
+//  both my list AND your list. If you are maintaining special lists, please
+//  share in the forum in case others want to benefit from your list.
+
+$customfilepath = "";
+
+
 //##############################################################################
 //  Edit the location where your Book Covers are stored
 $NNBookCoverPath = "/var/www/newznab/www/covers/book/";
@@ -63,6 +70,10 @@ $textcount = 1;
 $releases = new Releases();
 $db = new Db;
 $countself2 = 0;
+
+
+
+
 
 //########################################
 //  Start Delete Self Publishers Code
@@ -467,7 +478,44 @@ if ($countself > 0) {
 		echo "\033[1;1;33mKeyword loop complete. \n";
 		echo "\033[1;1;36mLoop Total: \033[1;1;35m$countloop \033[1;1;36mrelease(s)\n\n\n\n\n\n";
 // ##############################		
-	
+
+
+//###############################
+//  Start of CUSTOM Loop
+//###############################
+
+if ($customfilepath != "") 
+{
+	$countloop = 0;
+	echo " \n";
+	echo "\033[0;45;30m                                        \033[1;0;36m\n";
+	echo "\033[0;45;30m     Starting MY CUSTOM List Loop       \033[1;0;36m\n";
+	echo "\033[0;45;30m                                        \033[1;0;36m\n";
+	echo " \n";
+	$textcount = 1;
+	while ($textcount <= 7)
+		{	// CHANGE THE WORD BELOW AND SQL STRING BELOW
+			$txtfile = "mylist" . $textcount . ".txt";
+			$filename = "$customfilepath/$txtfile";
+			error_reporting(0);
+			
+			if (fopen($filename, "r")) {
+				$Vdata = file_get_contents("$filename");
+				$sql = "Select `ID`, `name` from `releases` where `categoryID` = 7020 and `searchname` REGEXP '{$Vdata}'";
+				//echo "File found \n\n";
+				ProcessBooks();
+			} else {
+				echo "\033[1;1;30mFile $txtfile is not used yet. No worries, this is for future use.\n";
+			}
+			$textcount++;
+		}
+		echo "\033[1;1;30m-----------------------------------------------------------------------\n";
+		echo "\033[1;1;33mKeyword loop complete. \n";
+		echo "\033[1;1;36mLoop Total: \033[1;1;35m$countloop \033[1;1;36mrelease(s)\n\n\n\n\n\n";
+}
+		
+		// ##############################	
+
 	
 function ProcessBooks()
 {	
@@ -490,24 +538,28 @@ function ProcessBooks()
 				$start_time = MICROTIME(TRUE);	
 				$db = new Db;
 				$rel = $db->query($sql);
-				
+				$foundcount = count($rel);
 				$stop_time = MICROTIME(TRUE);	
 				$time = round($stop_time - $start_time);
 				echo "\033[1;0;36mScan Time: $time seconds\n";			
 				echo " \n";
 				$countloop = $countloop + count($rel);
-				$countme = $countme + count($rel) ;				
+				$countme = $countme + count($rel) ;		
+				$minicount = 0;		
 
 				if(count($rel) > 0) 
 				{	echo "\033[1;1;33mDeleting ".count($rel)." release(s)\n";
+					$foundcount = count($rel);
 					if($enabledelete == "true") 
 						{
+							
 							$start_time = MICROTIME(TRUE);
 							foreach ($rel as $r)
 							{
 								$name = $r['name'];
+								$minicount++;
 								$releases->delete($r['ID']);
-								echo "\033[1;0;32m    Deleted: \033[1;0;37m$name\n";
+								echo "\033[1;0;32m    Delete $minicount of $foundcount: \033[1;0;37m$name\n";
 							}
 							$stop_time = MICROTIME(TRUE);
 							$time = round($stop_time - $start_time);
@@ -519,8 +571,9 @@ function ProcessBooks()
 					} else {	
 							foreach ($rel as $r)
 							{
+								$minicount++;
 								$name = $r['name'];
-								echo "\033[1;0;32m    Deleted: \033[1;0;37m$name\n";
+								echo "\033[1;0;32m    Found $minicount of $foundcount: \033[1;0;37m$name\n";
 							}
 							echo "\033[1;41;33m Delete is set to $enabledelete. Nothing will be changed! ";
 							echo "\033[0;1;36m Setting needs editing in script.\n\n\n\n";
@@ -528,7 +581,7 @@ function ProcessBooks()
 				} else {
 							echo "\033[1;1;33mNothing to delete! \n\n\n\n\033[0;1;36m";				
 						}
-	
+	//return $db->query("SELECT r.id, r.name, bi.id as bookid, bi.publisher from releases r join bookinfo bi on r.bookinfoID = bi.ID ");		
 }
 
 if($enabledelete == "true") 
